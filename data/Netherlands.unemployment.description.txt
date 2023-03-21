@@ -1,16 +1,3 @@
-SOURCE:
-eurostat
-
-INTERNET LINKS:
-http://epp.eurostat.ec.europa.eu/portal/page?_pageid=1996,45323734&_dad=portal&_schema=PORTAL&screen=welcomeref&open=/labour/employ/lfsi/une&language=de&product=EU_MASTER_labour_market&root=EU_MASTER_labour_market&scrollto=0
-http://epp.eurostat.ec.europa.eu/extraction/evalight/EVAlight.jsp?A=1&language=en&root=/theme3/une/une_rt_m
-      
-DESCRIPTION
-series:              harmonized unemployment rates
-period of time :     1983.01 - 2008.01
-frequency:           monthly
-geopolitical entity: Netherlands
-sex:                 males and females
-age class:           -/+ 25 years
-seasonal adjustment: not seasonally adjusted
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:526c734574778d7ee80ab054ad9e619abf1633412833c6d18e67a81db251fafb
+size 673

@@ -1,16 +1,3 @@
-SOURCE:
-eurostat
-
-INTERNET LINKS:
-http://epp.eurostat.ec.europa.eu/portal/page?_pageid=1996,45323734&_dad=portal&_schema=PORTAL&screen=welcomeref&open=/labour/employ/lfsi/une&language=de&product=EU_MASTER_labour_market&root=EU_MASTER_labour_market&scrollto=0
-http://epp.eurostat.ec.europa.eu/extraction/evalight/EVAlight.jsp?A=1&language=en&root=/theme3/une/une_rt_m
-      
-DESCRIPTION
-series:              harmonized unemployment rates
-period of time :     1983.01 - 2008.01
-frequency:           monthly
-geopolitical entity: France
-sex:                 males and females
-age class:           -/+ 25 years
-seasonal adjustment: not seasonally adjusted
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dbcce4b4246bc959cae80c8e0c55b33d22c2bff04010d16a66a4d9247ae3e6f
+size 668
