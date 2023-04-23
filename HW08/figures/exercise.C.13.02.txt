@@ -1,0 +1,4 @@
+Model (a) is weakly stationary.
+Model (b) is NOT weakly stationary.
+Model (c) is weakly stationary.
+Model (d) is weakly stationary.
