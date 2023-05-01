@@ -1,0 +1,69 @@
+
+********************************************************************************
+automatic model selection (selection criterion: BIC )
+--------------------------------------------------------------------------------
+
+ ARIMA(0,1,0)            with drift         : -279.2557
+ ARIMA(0,1,0)            with drift         : -279.2557
+ ARIMA(1,1,0)(1,0,0)[12] with drift         : -268.9034
+ ARIMA(0,1,1)(0,0,1)[12] with drift         : -269.1718
+ ARIMA(0,1,0)                               : -284.7412
+ ARIMA(0,1,0)(1,0,0)[12] with drift         : -274.31
+ ARIMA(0,1,0)(0,0,1)[12] with drift         : -274.632
+ ARIMA(0,1,0)(1,0,1)[12] with drift         : Inf
+ ARIMA(1,1,0)            with drift         : -273.6617
+ ARIMA(0,1,1)            with drift         : -273.5965
+ ARIMA(1,1,1)            with drift         : -288.6171
+ ARIMA(1,1,1)(1,0,0)[12] with drift         : -286.8628
+ ARIMA(1,1,1)(0,0,1)[12] with drift         : -288.7116
+ ARIMA(1,1,1)(1,0,1)[12] with drift         : Inf
+ ARIMA(1,1,1)(0,0,2)[12] with drift         : -295.5355
+ ARIMA(1,1,1)(1,0,2)[12] with drift         : Inf
+ ARIMA(1,1,1)(0,0,3)[12] with drift         : -297.8063
+ ARIMA(1,1,1)(1,0,3)[12] with drift         : Inf
+ ARIMA(1,1,1)(0,0,4)[12] with drift         : -295.1438
+ ARIMA(1,1,1)(1,0,4)[12] with drift         : -290.2352
+ ARIMA(0,1,1)(0,0,3)[12] with drift         : -281.5137
+ ARIMA(1,1,0)(0,0,3)[12] with drift         : -281.6326
+ ARIMA(2,1,1)(0,0,3)[12] with drift         : -302.1777
+ ARIMA(2,1,1)(0,0,2)[12] with drift         : -301.2956
+ ARIMA(2,1,1)(1,0,3)[12] with drift         : -299.8488
+ ARIMA(2,1,1)(0,0,4)[12] with drift         : -299.8177
+ ARIMA(2,1,1)(1,0,2)[12] with drift         : Inf
+ ARIMA(2,1,1)(1,0,4)[12] with drift         : -294.5274
+ ARIMA(2,1,0)(0,0,3)[12] with drift         : -287.0989
+ ARIMA(3,1,1)(0,0,3)[12] with drift         : -299.6123
+ ARIMA(2,1,2)(0,0,3)[12] with drift         : -298.7388
+ ARIMA(1,1,2)(0,0,3)[12] with drift         : -304.2451
+ ARIMA(1,1,2)(0,0,2)[12] with drift         : -304.2531
+ ARIMA(1,1,2)(0,0,1)[12] with drift         : -297.1019
+ ARIMA(1,1,2)(1,0,2)[12] with drift         : -307.4773
+ ARIMA(1,1,2)(1,0,1)[12] with drift         : Inf
+ ARIMA(1,1,2)(2,0,2)[12] with drift         : -301.7904
+ ARIMA(1,1,2)(1,0,3)[12] with drift         : -301.7614
+ ARIMA(1,1,2)(2,0,1)[12] with drift         : -307.5706
+ ARIMA(1,1,2)(2,0,0)[12] with drift         : -297.705
+ ARIMA(1,1,2)(3,0,1)[12] with drift         : -301.805
+ ARIMA(1,1,2)(1,0,0)[12] with drift         : -295.5118
+ ARIMA(1,1,2)(3,0,0)[12] with drift         : -296.4727
+ ARIMA(1,1,2)(3,0,2)[12] with drift         : Inf
+ ARIMA(0,1,2)(2,0,1)[12] with drift         : Inf
+ ARIMA(1,1,1)(2,0,1)[12] with drift         : Inf
+ ARIMA(2,1,2)(2,0,1)[12] with drift         : -302.0292
+ ARIMA(1,1,3)(2,0,1)[12] with drift         : -302.2017
+ ARIMA(0,1,1)(2,0,1)[12] with drift         : Inf
+ ARIMA(0,1,3)(2,0,1)[12] with drift         : Inf
+ ARIMA(2,1,1)(2,0,1)[12] with drift         : -305.6017
+ ARIMA(2,1,3)(2,0,1)[12] with drift         : -298.0937
+ ARIMA(1,1,2)(2,0,1)[12]                    : -312.3942
+ ARIMA(1,1,2)(1,0,1)[12]                    : Inf
+ ARIMA(1,1,2)(2,0,0)[12]                    : -303.4228
+ ARIMA(1,1,2)(3,0,1)[12]                    : -306.6236
+ ARIMA(1,1,2)(2,0,2)[12]                    : -306.6125
+ ARIMA(1,1,2)(1,0,0)[12]                    : -301.2371
+ ARIMA(1,1,2)(1,0,2)[12]                    : -312.3067
+ ARIMA(1,1,2)(3,0,0)[12]                    : -302.1424
+ ARIMA(1,1,2)(3,0,2)[12]                    : Inf
+ ARIMA(0,1,2)(2,0,1)[12]                    : -292.7042
+ ARIMA(1,1,1)(2,0,1)[12]                    : Inf
+ ARIMA(2,1,2)(2,0,1)[12]                    : -306.8326

@@ -1,0 +1,62 @@
+
+********************************************************************************
+automatic model selection (selection criterion: BIC )
+--------------------------------------------------------------------------------
+
+ ARIMA(0,1,0)            with drift         : -279.0897
+ ARIMA(0,1,0)            with drift         : -279.0897
+ ARIMA(1,1,0)(1,0,0)[12] with drift         : -268.7218
+ ARIMA(0,1,1)(0,0,1)[12] with drift         : -268.9356
+ ARIMA(0,1,0)                               : -284.4842
+ ARIMA(0,1,0)(1,0,0)[12] with drift         : -274.0707
+ ARIMA(0,1,0)(0,0,1)[12] with drift         : -274.3511
+ ARIMA(0,1,0)(1,0,1)[12] with drift         : Inf
+ ARIMA(1,1,0)            with drift         : -273.543
+ ARIMA(0,1,1)            with drift         : -273.4675
+ ARIMA(1,1,1)            with drift         : -288.8579
+ ARIMA(1,1,1)(1,0,0)[12] with drift         : -287.0077
+ ARIMA(1,1,1)(0,0,1)[12] with drift         : -288.7213
+ ARIMA(1,1,1)(1,0,1)[12] with drift         : Inf
+ ARIMA(2,1,1)            with drift         : -295.1699
+ ARIMA(2,1,1)(1,0,0)[12] with drift         : -292.1159
+ ARIMA(2,1,1)(0,0,1)[12] with drift         : -293.4822
+ ARIMA(2,1,1)(1,0,1)[12] with drift         : Inf
+ ARIMA(2,1,0)            with drift         : -277.9603
+ ARIMA(3,1,1)            with drift         : -294.1281
+ ARIMA(2,1,2)            with drift         : -293.4968
+ ARIMA(1,1,2)            with drift         : -298.4712
+ ARIMA(1,1,2)(1,0,0)[12] with drift         : -295.516
+ ARIMA(1,1,2)(0,0,1)[12] with drift         : -296.9478
+ ARIMA(1,1,2)(1,0,1)[12] with drift         : Inf
+ ARIMA(0,1,2)            with drift         : -275.9107
+ ARIMA(1,1,3)            with drift         : -293.7685
+ ARIMA(0,1,3)            with drift         : -285.1456
+ ARIMA(2,1,3)            with drift         : Inf
+ ARIMA(1,1,2)                               : -304.1467
+ ARIMA(1,1,2)(1,0,0)[12]                    : -301.1827
+ ARIMA(1,1,2)(0,0,1)[12]                    : -302.6098
+ ARIMA(1,1,2)(1,0,1)[12]                    : Inf
+ ARIMA(0,1,2)                               : -281.3865
+ ARIMA(1,1,1)                               : -294.5397
+ ARIMA(2,1,2)                               : -299.1637
+ ARIMA(1,1,3)                               : -299.434
+ ARIMA(0,1,1)                               : -278.8797
+ ARIMA(0,1,3)                               : -290.6712
+ ARIMA(2,1,1)                               : -300.8533
+ ARIMA(2,1,3)                               : Inf
+
+ Best model: ARIMA(1,1,2)                               
+
+--------------------------------------------------------------------------------
+Series:  
+ARIMA(1,1,2) 
+
+Coefficients:
+         ar1      ma1     ma2
+      0.8618  -0.9355  0.2346
+s.e.  0.0530   0.0708  0.0556
+
+sigma^2 = 0.02296:  log likelihood = 163.77
+AIC=-319.54   AICc=-319.43   BIC=-304.15
+
+********************************************************************************

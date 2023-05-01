@@ -1,0 +1,134 @@
+
+********************************************************************************
+comparison of information criteria:
+
+$selection
+AIC(n)  HQ(n)  SC(n) FPE(n) 
+     4      3      3      4 
+
+$criteria
+                   1             2             3             4             5
+AIC(n) -1.624645e+01 -1.638873e+01 -1.647110e+01 -1.647968e+01 -1.647231e+01
+HQ(n)  -1.621015e+01 -1.632824e+01 -1.638641e+01 -1.637080e+01 -1.633923e+01
+SC(n)  -1.615648e+01 -1.623879e+01 -1.626118e+01 -1.620978e+01 -1.614243e+01
+FPE(n)  8.795479e-08  7.629063e-08  7.025993e-08  6.966268e-08  7.018283e-08
+                   6             7             8             9            10
+AIC(n) -1.645185e+01 -1.642740e+01 -1.641791e+01 -1.640686e+01 -1.639447e+01
+HQ(n)  -1.629457e+01 -1.624593e+01 -1.621224e+01 -1.617699e+01 -1.614041e+01
+SC(n)  -1.606200e+01 -1.597757e+01 -1.590810e+01 -1.583707e+01 -1.576471e+01
+FPE(n)  7.164039e-08  7.342323e-08  7.413622e-08  7.497635e-08  7.593109e-08
+                  11            12            13            14            15
+AIC(n) -1.641403e+01 -1.638024e+01 -1.638184e+01 -1.637170e+01 -1.638069e+01
+HQ(n)  -1.613577e+01 -1.607778e+01 -1.605519e+01 -1.602085e+01 -1.600564e+01
+SC(n)  -1.572429e+01 -1.563052e+01 -1.557214e+01 -1.550203e+01 -1.545103e+01
+FPE(n)  7.448473e-08  7.707468e-08  7.698629e-08  7.781209e-08  7.716312e-08
+                  16
+AIC(n) -1.638537e+01
+HQ(n)  -1.598613e+01
+SC(n)  -1.539574e+01
+FPE(n)  7.685587e-08
+
+
+********************************************************************************
+automatic model selection (selection criterion: SC )
+
+VAR Estimation Results:
+========================= 
+Endogenous variables: gdp, gpdi 
+Deterministic variables: const 
+Sample size: 242 
+Log Likelihood: 1276.234 
+Roots of the characteristic polynomial:
+0.9992 0.7349 0.7349 0.5785 0.4624 0.3238
+Call:
+VAR(y = mts.data, type = "const", lag.max = 4 * 4, ic = VAR.ic)
+
+
+Estimation results for equation gdp: 
+==================================== 
+gdp = gdp.l1 + gpdi.l1 + gdp.l2 + gpdi.l2 + gdp.l3 + gpdi.l3 + const 
+
+         Estimate Std. Error t value Pr(>|t|)    
+gdp.l1   1.500670   0.097959  15.319   <2e-16 ***
+gpdi.l1 -0.027666   0.019188  -1.442   0.1507    
+gdp.l2  -0.314854   0.151978  -2.072   0.0394 *  
+gpdi.l2  0.014960   0.024427   0.612   0.5408    
+gdp.l3  -0.165586   0.098475  -1.682   0.0940 .  
+gpdi.l3 -0.007727   0.016747  -0.461   0.6449    
+const   -0.030008   0.018848  -1.592   0.1127    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+Residual standard error: 0.009741 on 235 degrees of freedom
+Multiple R-Squared: 0.9999,	Adjusted R-squared: 0.9999 
+F-statistic: 6.719e+05 on 6 and 235 DF,  p-value: < 2.2e-16 
+
+
+Estimation results for equation gpdi: 
+===================================== 
+gpdi = gdp.l1 + gpdi.l1 + gdp.l2 + gpdi.l2 + gdp.l3 + gpdi.l3 + const 
+
+        Estimate Std. Error t value Pr(>|t|)    
+gdp.l1   2.68358    0.49764   5.393 1.69e-07 ***
+gpdi.l1  0.69114    0.09748   7.090 1.56e-11 ***
+gdp.l2  -3.09438    0.77205  -4.008 8.23e-05 ***
+gpdi.l2  0.29033    0.12409   2.340  0.02014 *  
+gdp.l3   0.68142    0.50026   1.362  0.17446    
+gpdi.l3 -0.25054    0.08507  -2.945  0.00355 ** 
+const   -0.52060    0.09575  -5.437 1.35e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+Residual standard error: 0.04948 on 235 degrees of freedom
+Multiple R-Squared: 0.9985,	Adjusted R-squared: 0.9985 
+F-statistic: 2.656e+04 on 6 and 235 DF,  p-value: < 2.2e-16 
+
+
+
+Covariance matrix of residuals:
+           gdp      gpdi
+gdp  9.488e-05 0.0003699
+gpdi 3.699e-04 0.0024486
+
+Correlation matrix of residuals:
+        gdp   gpdi
+gdp  1.0000 0.7675
+gpdi 0.7675 1.0000
+
+
+
+********************************************************************************
+Portmanteau test:
+
+	Portmanteau Test (asymptotic)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 110.51, df = 84, p-value = 0.02787
+
+$serial
+
+	Portmanteau Test (asymptotic)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 110.51, df = 84, p-value = 0.02787
+
+
+
+********************************************************************************
+Ljung-Box-Pierce test:
+
+	Portmanteau Test (adjusted)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 116.28, df = 84, p-value = 0.01135
+
+$serial
+
+	Portmanteau Test (adjusted)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 116.28, df = 84, p-value = 0.01135
+
+

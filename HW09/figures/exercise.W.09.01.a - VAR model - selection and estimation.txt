@@ -1,0 +1,140 @@
+
+********************************************************************************
+comparison of information criteria:
+
+$selection
+AIC(n)  HQ(n)  SC(n) FPE(n) 
+     9      5      4      9 
+
+$criteria
+                1           2           3           4           5           6
+AIC(n) -3.7733769 -3.92800310 -4.03826522 -4.13137205 -4.15027197 -4.16215107
+HQ(n)  -3.7371482 -3.87365997 -3.96580772 -4.04080018 -4.04158572 -4.03535044
+SC(n)  -3.6824933 -3.79167770 -3.85649803 -3.90416306 -3.87762118 -3.84405847
+FPE(n)  0.0229744  0.01968309  0.01762834  0.01606139  0.01576109  0.01557552
+                 7           8           9          10          11          12
+AIC(n) -4.16324499 -4.17511312 -4.17706689 -4.15624287 -4.13905429 -4.13041890
+HQ(n)  -4.01832999 -4.01208374 -3.99592313 -3.95698474 -3.92168179 -3.89493201
+SC(n)  -3.79971060 -3.76613693 -3.72264889 -3.65638308 -3.59375270 -3.53967550
+FPE(n)  0.01555924  0.01537661  0.01534777  0.01567219  0.01594569  0.01608611
+                13          14          15          16          17          18
+AIC(n) -4.13883481 -4.13426833 -4.13376773 -4.12902508 -4.13274239 -4.12159816
+HQ(n)  -3.88523355 -3.86255269 -3.84393772 -3.82108070 -3.80668363 -3.77742503
+SC(n)  -3.50264962 -3.45264133 -3.40669893 -3.35651449 -3.31479000 -3.25820397
+FPE(n)  0.01595377  0.01602966  0.01604096  0.01612096  0.01606534  0.01625013
+                19          20          21          22          23          24
+AIC(n) -4.11237805 -4.10583283 -4.10049211 -4.09329818 -4.07584981 -4.05963813
+HQ(n)  -3.75009054 -3.72543095 -3.70197585 -3.67666754 -3.64110480 -3.60677874
+SC(n)  -3.20354206 -3.15155504 -3.10077252 -3.04813679 -2.98524662 -2.92359314
+FPE(n)  0.01640598  0.01651966  0.01661471  0.01674195  0.01704473  0.01733227
+
+
+********************************************************************************
+automatic model selection (selection criterion: SC )
+
+VAR Estimation Results:
+========================= 
+Endogenous variables: infl, unemp 
+Deterministic variables: both 
+Sample size: 356 
+Log Likelihood: -264.831 
+Roots of the characteristic polynomial:
+0.9648 0.9648 0.6964 0.6144 0.6144 0.5893 0.5893 0.4823
+Call:
+VAR(y = mts.data, type = "both", lag.max = 24, ic = VAR.ic)
+
+
+Estimation results for equation infl: 
+===================================== 
+infl = infl.l1 + unemp.l1 + infl.l2 + unemp.l2 + infl.l3 + unemp.l3 + infl.l4 + unemp.l4 + const + trend 
+
+           Estimate Std. Error t value Pr(>|t|)    
+infl.l1   0.2202579  0.0529420   4.160 4.01e-05 ***
+unemp.l1 -0.0609651  0.2934330  -0.208  0.83553    
+infl.l2   0.2239851  0.0522120   4.290 2.32e-05 ***
+unemp.l2 -0.5856080  0.4098877  -1.429  0.15399    
+infl.l3   0.2882244  0.0522374   5.518 6.75e-08 ***
+unemp.l3  0.2686447  0.4114407   0.653  0.51423    
+infl.l4   0.1644938  0.0530113   3.103  0.00207 ** 
+unemp.l4  0.2805267  0.2954105   0.950  0.34297    
+const     1.3074320  0.5081188   2.573  0.01050 *  
+trend    -0.0021150  0.0009258  -2.284  0.02295 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+Residual standard error: 0.8459 on 346 degrees of freedom
+Multiple R-Squared: 0.825,	Adjusted R-squared: 0.8205 
+F-statistic: 181.3 on 9 and 346 DF,  p-value: < 2.2e-16 
+
+
+Estimation results for equation unemp: 
+====================================== 
+unemp = infl.l1 + unemp.l1 + infl.l2 + unemp.l2 + infl.l3 + unemp.l3 + infl.l4 + unemp.l4 + const + trend 
+
+           Estimate Std. Error t value Pr(>|t|)    
+infl.l1   0.0045852  0.0093979   0.488   0.6259    
+unemp.l1  0.9435315  0.0520885  18.114  < 2e-16 ***
+infl.l2  -0.0028953  0.0092684  -0.312   0.7549    
+unemp.l2  0.1857366  0.0727608   2.553   0.0111 *  
+infl.l3  -0.0022742  0.0092729  -0.245   0.8064    
+unemp.l3  0.0712545  0.0730365   0.976   0.3299    
+infl.l4   0.0213588  0.0094102   2.270   0.0238 *  
+unemp.l4 -0.2128076  0.0524395  -4.058 6.12e-05 ***
+const    -0.0266583  0.0901982  -0.296   0.7677    
+trend     0.0001510  0.0001644   0.919   0.3588    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+Residual standard error: 0.1502 on 346 degrees of freedom
+Multiple R-Squared: 0.9887,	Adjusted R-squared: 0.9885 
+F-statistic:  3377 on 9 and 346 DF,  p-value: < 2.2e-16 
+
+
+
+Covariance matrix of residuals:
+           infl     unemp
+infl   0.715474 -0.007947
+unemp -0.007947  0.022545
+
+Correlation matrix of residuals:
+          infl    unemp
+infl   1.00000 -0.06257
+unemp -0.06257  1.00000
+
+
+
+********************************************************************************
+Portmanteau test:
+
+	Portmanteau Test (asymptotic)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 124.1, df = 80, p-value = 0.001157
+
+$serial
+
+	Portmanteau Test (asymptotic)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 124.1, df = 80, p-value = 0.001157
+
+
+
+********************************************************************************
+Ljung-Box-Pierce test:
+
+	Portmanteau Test (adjusted)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 128.88, df = 80, p-value = 0.00044
+
+$serial
+
+	Portmanteau Test (adjusted)
+
+data:  Residuals of VAR object mts.data.VAR.fit
+Chi-squared = 128.88, df = 80, p-value = 0.00044
+
+
