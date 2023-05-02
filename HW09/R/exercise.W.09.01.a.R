@@ -58,7 +58,7 @@ lag.in.years.label <- expression(paste("lag ", tau, " ( in years)", sep = ""))
 
 
 # plot time series and associated ac.f and pac.f
-pdf(paste("HW09/figures/exercise.W.09.01.a - ", mts.desc[2], ".pdf"))
+pdf(paste0("HW09/figures/exercise.W.09.01.a - ", mts.desc[2], ".pdf"))
 
 layout(matrix(c(1, 1, 2, 2, 3, 4, 5, 6), nr = 2, byrow = T))
 par(oma = c(0, 2, 4, 2))
@@ -105,7 +105,7 @@ dev.off()
 # open connection to write output to file
 output.file <- paste(
    "HW09/figures/exercise.W.09.01.a - SARIMA model selection - ",
-   mts.desc[2], "", ".txt",
+   mts.desc[2], ".txt",
    sep = ""
 )
 sink(file = output.file, append = F, type = "output", split = F)
@@ -141,7 +141,7 @@ file.show(output.file,
 )
 
 # diagnostic plots
-pdf(paste(
+pdf(paste0(
    "HW09/figures/exercise.W.09.01.a - SARIMA model - diagnostic plots - ",
    mts.desc[2], ".pdf"
 ))
@@ -238,7 +238,6 @@ for (s in 1:2) {
       )
    )
 
-   s <- 2
    res <- ts(
       data = residuals(mts.data.VAR.fit)[, s],
       start = start(mts.data[, s]), frequency = frequency(mts.data[, s])
@@ -273,7 +272,7 @@ for (s in 1:2) {
    )
    title(main = "sample pac.f.", font.main = 1, cex.main = 1)
    mtext(text = paste(
-      "HW09/figures/Exercise 9.1 (a): VAR model - diagnostic plots - equation for ",
+      "Exercise 9.1 (a): VAR model - diagnostic plots - equation for ",
       mts.desc[s],
       sep = ""
    ), side = 3, line = 6, outer = T, font = 2, cex = 1)
@@ -327,8 +326,8 @@ class(ts.data.VAR.pred) <- "forecast"
 
 
 # plot point predictions and prediction intervals
-pdf(paste(
-   "HW09/figures/exercise.W.09.01.a - ", mts.desc[2],
+pdf(paste0(
+   "HW09/figures/exercise.W.09.01.a - ", mts.desc[1],
    " - comparison of predictions and prediction intervals.pdf"
 ))
 

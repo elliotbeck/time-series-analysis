@@ -61,7 +61,7 @@ lag.in.years.label <- expression(paste("lag ", tau, " ( in years)", sep = ""))
 
 
 # plot time series and associated ac.f.s and pac.f.s
-pdf(paste("HW09/figures/exercise.W.09.01.b - ", mts.desc[2], ".pdf"))
+pdf(paste0("HW09/figures/exercise.W.09.01.b - ", mts.desc[2], ".pdf"))
 
 layout(matrix(c(1, 1, 2, 2, 3, 4, 5, 6), nr = 2, byrow = T))
 par(oma = c(0, 2, 4, 2))
@@ -126,10 +126,9 @@ for (w in 12:1) {
    # search for best SARIMA model
 
    # open connection to write output to file
-   output.file <- paste(
+   output.file <- paste0(
       "HW09/figures/exercise.W.09.01.b - SARIMA model selection - ",
-      mts.desc[2], " - subperiod ", format(13 - w, width = 2), ".txt",
-      sep = ""
+      mts.desc[2], " - subperiod ", format(13 - w, width = 2), ".txt"
    )
    sink(file = output.file, append = F, type = "output", split = F)
 
@@ -153,16 +152,9 @@ for (w in 12:1) {
    print(ts.data.subperiod.SARIMA.fit.list[[w]])
    cat(delimiter.stars)
 
-   # close connection to write output to file and display file
+   # close connection to write output to file
    sink()
-   file.show(output.file,
-      title = paste("HW09/figures/exercise.W.09.01.b - SARIMA model selection - ",
-         mts.desc[2], " - subperiod ", format(13 - w, width = 2), ".txt",
-         sep = ""
-      )
-   )
 
-   # search for best VAR model
    mts.data.subperiod.VAR.ic[[w]] <- VARselect(
       y = mts.data.subperiod,
       lag.max = 24, type = "both", season = NULL
@@ -173,10 +165,9 @@ for (w in 12:1) {
    )
 
    # open connection to write output to file
-   output.file <- paste(
+   output.file <- paste0(
       "HW09/figures/exercise.W.09.01.b - VAR model - selection and estimation - subperiod ",
-      format(13 - w, width = 2), ".txt",
-      sep = ""
+      format(13 - w, width = 2), ".txt"
    )
    sink(file = output.file, append = F, type = "output", split = F)
 
@@ -208,16 +199,8 @@ for (w in 12:1) {
       lags.pt = 24, type = "PT.adjusted"
    ))
 
-   # close connection to write output to file and display file
+   # close connection to write output to file
    sink()
-   file.show(output.file,
-      title = paste(
-         "HW09/figures/exercise.W.09.01.b - VAR model - selection and estimation - subperiod ",
-         format(13 - w, width = 2), ".txt",
-         sep = ""
-      )
-   )
-
 
    # predict with SARIMA
    ts.data.subperiod.SARIMA.pred.list[[w]] <- forecast(
@@ -226,7 +209,7 @@ for (w in 12:1) {
    )
 
    # compute prediction error
-   ts.data.subperiod.SARIMA.pred.error[w] <- ts.data.subperiod[length(ts.data.subperiod)] -
+   ts.data.subperiod.SARIMA.pred.error[w] <- ts.data[length(ts.data.subperiod) + 1] -
       ts.data.subperiod.SARIMA.pred.list[[w]]$mean
 
    # predict with VAR
@@ -262,7 +245,7 @@ for (w in 12:1) {
    class(ts.data.subperiod.VAR.pred.list[[w]]) <- "forecast"
 
    # compute prediction error
-   ts.data.subperiod.VAR.pred.error[w] <- ts.data.subperiod[length(ts.data.subperiod)] -
+   ts.data.subperiod.VAR.pred.error[w] <- ts.data[length(ts.data.subperiod) + 1] -
       ts.data.subperiod.VAR.pred.list[[w]]$mean
 }
 
@@ -282,9 +265,9 @@ summary.comparison.pred.error <- data.frame(
 rownames(summary.comparison.pred.error) <- list("SARIMA", "VAR")
 
 # open connection to write output to file
-output.file <- paste("HW09/figures/exercise.W.09.01.b - ",
-   mts.desc[2], " - comparison of prediction errors", ".txt",
-   sep = ""
+output.file <- paste0(
+   "HW09/figures/exercise.W.09.01.b - ",
+   mts.desc[2], " - comparison of prediction errors", ".txt"
 )
 sink(file = output.file, append = F, type = "output", split = F)
 
@@ -294,11 +277,5 @@ cat("summary of comparison of prediction errors:\n\n")
 print(summary.comparison.pred.error)
 cat(delimiter.stars)
 
-# close connection to write output to file and display file
+# close connection to write output to file
 sink()
-file.show(output.file,
-   title = paste("HW09/figures/exercise.W.09.01.b - ",
-      mts.desc[2], " - comparison of prediction errors", ".txt",
-      sep = ""
-   )
-)
