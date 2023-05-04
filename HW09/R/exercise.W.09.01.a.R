@@ -327,7 +327,7 @@ class(ts.data.VAR.pred) <- "forecast"
 
 # plot point predictions and prediction intervals
 pdf(paste0(
-   "HW09/figures/exercise.W.09.01.a - ", mts.desc[1],
+   "HW09/figures/exercise.W.09.01.a - ", mts.desc[2],
    " - comparison of predictions and prediction intervals.pdf"
 ))
 
