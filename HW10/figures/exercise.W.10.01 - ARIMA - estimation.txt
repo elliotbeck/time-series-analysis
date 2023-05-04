@@ -1,0 +1,93 @@
+
+********************************************************************************
+ARIMA model without dummy variable:
+
+
+Call:
+arima(x = disp.income, order = c(1, 1, 0), seasonal = list(order = c(0, 0, 0), 
+    period = NA), xreg = time.trend)
+
+Coefficients:
+          ar1  time.trend
+      -0.1355      0.0028
+s.e.   0.1024      0.0011
+
+sigma^2 estimated as 0.0001461:  log likelihood = 284.67,  aic = -563.34
+--------------------------------------------------------------------------------
+Box-Pierce test:
+
+	Box-Pierce test
+
+data:  residuals(arima.nod.fit)
+X-squared = 9.6399, df = 16, p-value = 0.8847
+
+--------------------------------------------------------------------------------
+Ljung-Box test:
+
+	Box-Ljung test
+
+data:  residuals(arima.nod.fit)
+X-squared = 10.607, df = 16, p-value = 0.8331
+
+
+********************************************************************************
+ARIMA model with impulse dummy variable:
+
+
+Call:
+arima(x = disp.income, order = c(1, 1, 0), seasonal = list(order = c(0, 0, 0), 
+    period = NA), xreg = cbind(time.trend, impulse.dummy))
+
+Coefficients:
+         ar1  time.trend  impulse.dummy
+      0.2432      0.0028        -0.0504
+s.e.  0.1025      0.0013         0.0062
+
+sigma^2 estimated as 9.731e-05:  log likelihood = 303.96,  aic = -599.91
+--------------------------------------------------------------------------------
+Box-Pierce test:
+
+	Box-Pierce test
+
+data:  residuals(arima.imp.fit)
+X-squared = 12.041, df = 16, p-value = 0.7412
+
+--------------------------------------------------------------------------------
+Ljung-Box test:
+
+	Box-Ljung test
+
+data:  residuals(arima.imp.fit)
+X-squared = 13.303, df = 16, p-value = 0.6505
+
+
+********************************************************************************
+ARIMA model with step dummy variable:
+
+
+Call:
+arima(x = disp.income, order = c(1, 1, 0), seasonal = list(order = c(0, 0, 0), 
+    period = NA), xreg = cbind(time.trend, step.dummy))
+
+Coefficients:
+         ar1  time.trend  step.dummy
+      0.0200      0.0036     -0.0725
+s.e.  0.1089      0.0010      0.0102
+
+sigma^2 estimated as 9.486e-05:  log likelihood = 305.2,  aic = -602.4
+--------------------------------------------------------------------------------
+Box-Pierce test:
+
+	Box-Pierce test
+
+data:  residuals(arima.step.fit)
+X-squared = 12.957, df = 16, p-value = 0.6759
+
+--------------------------------------------------------------------------------
+Ljung-Box test:
+
+	Box-Ljung test
+
+data:  residuals(arima.step.fit)
+X-squared = 14.435, df = 16, p-value = 0.5663
+

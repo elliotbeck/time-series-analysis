@@ -1,0 +1,119 @@
+
+********************************************************************************
+comparison of information criteria:
+
+$selection
+AIC(n)  HQ(n)  SC(n) FPE(n) 
+     2      2      2      2 
+
+$criteria
+                   1             2             3             4             5
+AIC(n) -1.886994e+01 -1.900001e+01 -1.897064e+01 -1.897142e+01 -1.895276e+01
+HQ(n)  -1.875056e+01 -1.883288e+01 -1.875576e+01 -1.870879e+01 -1.864238e+01
+SC(n)  -1.857219e+01 -1.858316e+01 -1.843468e+01 -1.831636e+01 -1.817860e+01
+FPE(n)  6.383087e-09  5.607767e-09  5.780807e-09  5.785483e-09  5.908053e-09
+                   6             7             8             9            10
+AIC(n) -1.885970e+01 -1.878754e+01 -1.871591e+01 -1.868582e+01 -1.870985e+01
+HQ(n)  -1.850157e+01 -1.838166e+01 -1.826227e+01 -1.818443e+01 -1.816071e+01
+SC(n)  -1.796644e+01 -1.777518e+01 -1.758444e+01 -1.743526e+01 -1.734019e+01
+FPE(n)  6.504806e-09  7.020773e-09  7.582555e-09  7.866484e-09  7.742843e-09
+                  11            12            13            14            15
+AIC(n) -1.875461e+01 -1.876299e+01 -1.888189e+01 -1.885370e+01 -1.878070e+01
+HQ(n)  -1.815772e+01 -1.811835e+01 -1.818950e+01 -1.811356e+01 -1.799281e+01
+SC(n)  -1.726585e+01 -1.715512e+01 -1.715492e+01 -1.700763e+01 -1.681553e+01
+FPE(n)  7.477565e-09  7.503361e-09  6.755923e-09  7.063806e-09  7.744966e-09
+                  16
+AIC(n) -1.874427e+01
+HQ(n)  -1.790863e+01
+SC(n)  -1.666000e+01
+FPE(n)  8.211456e-09
+
+
+********************************************************************************
+automatic model selection (selection criterion: SC )
+
+VAR Estimation Results:
+========================= 
+Endogenous variables: disp, cons 
+Deterministic variables: both 
+Sample size: 94 
+Log Likelihood: 616.857 
+Roots of the characteristic polynomial:
+0.9032 0.5766 0.2181 0.01952
+Call:
+VAR(y = mts.data, type = "both", exogen = exogen.var.list[[r]], 
+    lag.max = 4 * 4, ic = VAR.ic)
+
+
+Estimation results for equation disp: 
+===================================== 
+disp = disp.l1 + cons.l1 + disp.l2 + cons.l2 + const + trend + step.dummy 
+
+             Estimate Std. Error t value Pr(>|t|)    
+disp.l1     0.7885116  0.1490859   5.289 9.06e-07 ***
+cons.l1    -0.1060303  0.1451821  -0.730  0.46715    
+disp.l2     0.0486299  0.1391034   0.350  0.72749    
+cons.l2     0.1836321  0.1338492   1.372  0.17361    
+const       0.1233399  0.0455168   2.710  0.00811 ** 
+trend       0.0004315  0.0002715   1.589  0.11567    
+step.dummy -0.0177492  0.0054981  -3.228  0.00176 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+Residual standard error: 0.01135 on 87 degrees of freedom
+Multiple R-Squared: 0.9822,	Adjusted R-squared: 0.981 
+F-statistic: 801.9 on 6 and 87 DF,  p-value: < 2.2e-16 
+
+
+Estimation results for equation cons: 
+===================================== 
+cons = disp.l1 + cons.l1 + disp.l2 + cons.l2 + const + trend + step.dummy 
+
+             Estimate Std. Error t value Pr(>|t|)    
+disp.l1     0.1455543  0.1510535   0.964  0.33792    
+cons.l1     0.4537188  0.1470983   3.084  0.00273 ** 
+disp.l2     0.0279384  0.1409393   0.198  0.84333    
+cons.l2     0.1510789  0.1356157   1.114  0.26834    
+const       0.0917278  0.0461175   1.989  0.04984 *  
+trend       0.0013612  0.0002751   4.948 3.63e-06 ***
+step.dummy -0.0289741  0.0055707  -5.201 1.30e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+Residual standard error: 0.0115 on 87 degrees of freedom
+Multiple R-Squared: 0.9879,	Adjusted R-squared: 0.9871 
+F-statistic:  1186 on 6 and 87 DF,  p-value: < 2.2e-16 
+
+
+
+Covariance matrix of residuals:
+          disp      cons
+disp 1.289e-04 9.527e-05
+cons 9.527e-05 1.323e-04
+
+Correlation matrix of residuals:
+       disp   cons
+disp 1.0000 0.7294
+cons 0.7294 1.0000
+
+
+
+********************************************************************************
+Portmanteau test:
+
+	Portmanteau Test (asymptotic)
+
+data:  Residuals of VAR object mts.data.VAR.fit.list[[r]]
+Chi-squared = 79.834, df = 88, p-value = 0.7207
+
+
+********************************************************************************
+Portmanteau test:
+
+	Portmanteau Test (adjusted)
+
+data:  Residuals of VAR object mts.data.VAR.fit.list[[r]]
+Chi-squared = 90.836, df = 88, p-value = 0.3968
+
