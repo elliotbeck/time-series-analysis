@@ -107,7 +107,7 @@ for (r in 1:2) {
 
    # open connection to write output to file
    output.file <- paste(
-      "exercise.W.10.03 - VAR model - ",
+      "HW10/figures/exercise.W.10.03 - VAR model - ",
       exogen.desc.list[[r]], " - selection and estimation", ".txt",
       sep = ""
    )

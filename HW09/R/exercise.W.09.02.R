@@ -130,7 +130,6 @@ for (s in 1:2) {
       mts.desc[s], ".pdf",
       sep = ""
    ))
-   s <- 2
    res <- ts(
       data = residuals(mts.data.VAR.fit)[, s],
       start = start(mts.data[, s]), frequency = frequency(mts.data[, s])
@@ -184,7 +183,7 @@ pdf("HW09/figures/exercise.W.09.02 - impulse response functions.pdf")
 layout(matrix(data = c(1, 3, 2, 4), nr = 2, byrow = T))
 par(oma = c(0, 2, 4, 2))
 i.r.pairs <- list(c(1, 1), c(1, 2), c(2, 1), c(2, 2))
-for (i.r.pair in 1:length(i.r.pairs)){
+for (i.r.pair in 1:length(i.r.pairs)) {
    mts.data.VAR.irf <- irf(
       x = mts.data.VAR.fit,
       impulse = mts.var.names[i.r.pairs[[i.r.pair]][1]],
@@ -232,7 +231,7 @@ pdf("HW09/figures/exercise.W.09.02 - orthogonal impulse response functions.pdf")
 layout(matrix(data = c(1, 3, 2, 4), nr = 2, byrow = T))
 par(oma = c(0, 2, 4, 2))
 i.r.pairs <- list(c(1, 1), c(1, 2), c(2, 1), c(2, 2))
-for (i.r.pair in 1:length(i.r.pairs)){
+for (i.r.pair in 1:length(i.r.pairs)) {
    mts.data.VAR.irf <- irf(
       x = mts.data.VAR.fit,
       impulse = mts.var.names[i.r.pairs[[i.r.pair]][1]],
@@ -313,7 +312,7 @@ pdf("HW09/figures/exercise.W.09.02 - predictions and prediction intervals.pdf")
 
 layout(matrix(c(1, 1, 2, 3, 3, 4), nr = 2, byrow = T))
 par(oma = c(0, 2, 4, 2))
-for (k in 1:length(mts.var.names)){
+for (k in 1:length(mts.var.names)) {
    plot(
       x = ts.data.Var.pred.list[[k]], , xlab = "Time", ylab = mts.units[2],
       include = 12 * 10, shaded = T, shadecols = "pink1", main = "", col =
